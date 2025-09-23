@@ -14,6 +14,7 @@
 :root {
   --default-font: "Montserrat", sans-serif; /* textos do corpo */
   --heading-font: "Laila", serif;          /* títulos */
+  --nav-font: "Montserrat", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
