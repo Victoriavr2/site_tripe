@@ -210,45 +210,7 @@
       </div>
 
     </section><!-- /Services Section -->
-
-    <!-- Features Section -->
-    <section id="features" class="features section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Depoimentos</h2>
-        <p>Alguns depoimentos para te inspirarem!</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4 align-items-center features-item">
-          <div class="col-lg-5 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-            <h3>Simone Vieira Assunção</h3>
-            <p>texto 1</p>
-          </div>
-          <div class="col-lg-7 order-1 order-lg-2 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="100">
-            <div class="image-stack">
-              <img src="assets/img/features-light-1.jpg" alt="" class="stack-front">
-              <img src="assets/img/features-light-2.jpg" alt="" class="stack-back">
-            </div>
-          </div>
-        </div><!-- Features Item -->
-
-        <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-          <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/features-light-3.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-            <h3>Beatriz Vieira Assunção</h3>
-            <p>teste 2</p>
-          </div>
-        </div><!-- Features Item -->
-
-      </div>
-
-    </section><!-- /Features Section -->
-
+    
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
 
@@ -368,18 +330,94 @@
         <h2>Produtos</h2>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="zoom-in" data-aos-delay="100">
+       <div class="container">
+    <!-- Grid de Produtos -->
+    <div class="row text-center">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="produto" onclick="mostrarDescricao(1)">
+          <img src="assets/img/produto1.jpg" class="img-fluid rounded" alt="Produto 1">
+          <h5 class="mt-2">Produto 1</h5>
+        </div>
+      </div>
 
-       <div class="row gy-4 align-items-stretch justify-content-between features-item ">
-          <div class="col-lg-6 d-flex align-items-center features-img-bg" data-aos="zoom-out">
-            <img src="assets/img/exemplo monoculo.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-5 d-flex justify-content-center flex-column" data-aos="fade-up">
-            <h3>Monóculo</h3>
-            <p>Transforme memórias em histórias inesquecíveis!
-              O tempo passa, mas as lembranças que realmente importam podem ser eternizadas. Já imaginou folhear um álbum e reviver cada sorriso, cada abraço, cada instante especial? Agora, além das fotos dos meus ensaios, você também pode transformar qualquer momento inesquecível em um álbum único: aquela viagem dos sonhos, os primeiros passos do seu filho, momentos em família… Tudo aquilo que merece ser guardado com carinho!
-              Não deixe suas melhores memórias apenas esquecidas na nuvem. Vamos dar vida a elas em um álbum especial!</p>
-          </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="produto" onclick="mostrarDescricao(2)">
+          <img src="assets/img/produto2.jpg" class="img-fluid rounded" alt="Produto 2">
+          <h5 class="mt-2">Produto 2</h5>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="produto" onclick="mostrarDescricao(3)">
+          <img src="assets/img/produto3.jpg" class="img-fluid rounded" alt="Produto 3">
+          <h5 class="mt-2">Produto 3</h5>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="produto" onclick="mostrarDescricao(4)">
+          <img src="assets/img/produto4.jpg" class="img-fluid rounded" alt="Produto 4">
+          <h5 class="mt-2">Produto 4</h5>
+        </div>
+      </div>    
+
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="produto" onclick="mostrarDescricao(5)">
+          <img src="assets/img/produto5.jpg" class="img-fluid rounded" alt="Produto 5">
+          <h5 class="mt-2">Produto 5</h5>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="produto" onclick="mostrarDescricao(6)">
+          <img src="assets/img/produto6.jpg" class="img-fluid rounded" alt="Produto 6">
+          <h5 class="mt-2">Produto 6</h5>
+        </div>
+      </div>
+
+    <!-- Área de descrição -->
+    <div id="descricao-produto" class="mt-5 p-4 border rounded bg-light" style="display:none;">
+      <h3 id="titulo-produto"></h3>
+      <p id="texto-produto"></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Textos de cada produto
+  const produtos = {
+    1: {
+      titulo: "Pen-Drive",
+      texto: "Transforme memórias em histórias inesquecíveis! O tempo passa, mas as lembranças que realmente importam podem ser eternizadas..."
+    },
+    2: {
+      titulo: "Álbum Fotográfico",
+      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
+    },
+    3: {
+      titulo: "Álbum de Figurinhas",
+      texto: "Decore sua casa com lembranças especiais transformadas em arte..."
+    },
+    4: {
+      titulo: "Quebra Cabeça",
+      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
+    },
+    5: {
+      titulo: "Porta Retrato",
+      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
+    },
+    6: {
+      titulo: "Monóculo",
+      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
+    };
+
+  function mostrarDescricao(id) {
+    document.getElementById("descricao-produto").style.display = "block";
+    document.getElementById("titulo-produto").innerText = produtos[id].titulo;
+    document.getElementById("texto-produto").innerText = produtos[id].texto;
+  }
+</script>
+
        </div><!-- End Pricing Item -->
 
         </div>
