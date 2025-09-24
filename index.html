@@ -323,51 +323,134 @@
     </section><!-- /Portfolio Section -->
 
     <!-- Pricing Section -->
-    <section id="produtos" class="pricing section">
+<section id="produtos" class="pricing section">
   <div class="container section-title" data-aos="fade-up">
     <h2>Produtos</h2>
   </div>
 
   <div class="container">
-    <!-- Grid de Produtos -->
-    <div class="row text-center">
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="abrirModal(1)">
-          <img src="assets/img/produto1.jpg" class="img-fluid rounded" alt="Produto 1">
-          <h5 class="mt-2">Produto 1</h5>
+    <div class="row">
+      
+      <!-- Coluna da esquerda -->
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6">
+            <div class="produto" onclick="mostrarProduto(1)">
+              <img src="assets/img/Tripé Logo.png" class="img-fluid rounded" alt="Produto 1">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="produto" onclick="mostrarProduto(2)">
+              <img src="assets/img/Tripé Logo.png" class="img-fluid rounded" alt="Produto 2">
+            </div>
+            
+          </div>
+          <div class="col-6">
+            <div class="produto" onclick="mostrarProduto(3)">
+              <img src="assets/img/Tripé Logo.png" class="img-fluid rounded" alt="Produto 3">
+            </div>
+            
+          </div>
+          <div class="col-6">
+            <div class="produto" onclick="mostrarProduto(4)">
+              <img src="assets/img/Tripé Logo.png" class="img-fluid rounded" alt="Produto 4">
+            </div>
+            
+          </div>
+          <div class="col-6">
+            <div class="produto" onclick="mostrarProduto(5)">
+              <img src="assets/img/Tripé Logo.png" class="img-fluid rounded" alt="Produto 5">
+            </div>
+            
+          </div>
+          <div class="col-6">
+            <div class="produto" onclick="mostrarProduto(6)">
+              <img src="assets/img/Tripé Logo.png" class="img-fluid rounded" alt="Produto 6">
+            </div>
+            
+          </div>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="abrirModal(2)">
-          <img src="assets/img/produto2.jpg" class="img-fluid rounded" alt="Produto 2">
-          <h5 class="mt-2">Produto 2</h5>
+      <!-- Coluna da direita -->
+      <div class="col-lg-6 d-flex align-items-center">
+        <div id="descricao-produto">
+          <h3 id="titulo-produto">Selecione um produto</h3>
+          <p id="texto-produto">Clique em um dos produtos ao lado para ver mais informações.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="abrirModal(3)">
-          <img src="assets/img/produto3.jpg" class="img-fluid rounded" alt="Produto 3">
-          <h5 class="mt-2">Produto 3</h5>
-        </div>
-      
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="abrirModal(4)">
-          <img src="assets/img/produto4.jpg" class="img-fluid rounded" alt="Produto 4">
-          <h5 class="mt-2">Produto 4</h5>
-        </div>
+<style>
+  .produto {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="abrirModal(5)">
-          <img src="assets/img/produto5.jpg" class="img-fluid rounded" alt="Produto 5">
-          <h5 class="mt-2">Produto 5</h5>
-        </div>
+  .produto img {
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
 
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="abrirModal(6)">
-          <img src="assets/img/produto6.jpg" class="img-fluid rounded" alt="Produto 6">
-          <h5 class="mt-2">Produto 6</h5>
-        </div>
-        
+  .produto.selecionado img {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  }
+
+  .produto.desfocado img {
+    filter: blur(2px) brightness(0.8);
+    opacity: 0.7;
+  }
+</style>
+
+<script>
+  const produtos = {
+    1: {
+      titulo: "Monóculo",
+      texto: "Transforme memórias em histórias inesquecíveis! O tempo passa, mas as lembranças que realmente importam podem ser eternizadas."
+    },
+    2: {
+      titulo: "Álbum Fotográfico",
+      texto: "Guarde seus melhores momentos em álbuns personalizados, com design único e acabamento profissional."
+    },
+    3: {
+      titulo: "Quadro Decorativo",
+      texto: "Decore seu ambiente com quadros fotográficos que transformam lembranças em arte."
+    },
+    4: {
+      titulo: "Album de figurinha",
+      texto: "Conte sua história em páginas encadernadas com qualidade premium."
+    },
+    5: {
+      titulo: "Pen-drive",
+      texto: "Reviva momentos especiais o ano inteiro com calendários exclusivos."
+    },
+    6: {
+      titulo: "Monoculos",
+      texto: "Impressões de alta qualidade para valorizar suas fotografias favoritas."
+    }
+  };
+
+  function mostrarProduto(id) {
+    // Atualiza o texto da direita
+    document.getElementById("titulo-produto").innerText = produtos[id].titulo;
+    document.getElementById("texto-produto").innerText = produtos[id].texto;
+
+    // Reseta estilos de todos os produtos
+    document.querySelectorAll(".produto").forEach(el => {
+      el.classList.remove("selecionado");
+      el.classList.add("desfocado");
+    });
+
+    // Destaca o selecionado
+    const selecionado = document.querySelector(`.produto:nth-child(${id})`);
+    selecionado.classList.add("selecionado");
+    selecionado.classList.remove("desfocado");
+  }
+</script>
        </div><!-- End Pricing Item -->
 
         </div>
