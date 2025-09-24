@@ -324,100 +324,50 @@
 
     <!-- Pricing Section -->
     <section id="produtos" class="pricing section">
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Produtos</h2>
+  </div>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Produtos</h2>
-      </div><!-- End Section Title -->
-
-       <div class="container">
+  <div class="container">
     <!-- Grid de Produtos -->
     <div class="row text-center">
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="mostrarDescricao(1)">
+        <div class="produto" onclick="abrirModal(1)">
           <img src="assets/img/produto1.jpg" class="img-fluid rounded" alt="Produto 1">
           <h5 class="mt-2">Produto 1</h5>
         </div>
       </div>
 
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="mostrarDescricao(2)">
+        <div class="produto" onclick="abrirModal(2)">
           <img src="assets/img/produto2.jpg" class="img-fluid rounded" alt="Produto 2">
           <h5 class="mt-2">Produto 2</h5>
         </div>
-      </div>
 
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="mostrarDescricao(3)">
+        <div class="produto" onclick="abrirModal(3)">
           <img src="assets/img/produto3.jpg" class="img-fluid rounded" alt="Produto 3">
           <h5 class="mt-2">Produto 3</h5>
         </div>
-      </div>
-
+      
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="mostrarDescricao(4)">
+        <div class="produto" onclick="abrirModal(4)">
           <img src="assets/img/produto4.jpg" class="img-fluid rounded" alt="Produto 4">
           <h5 class="mt-2">Produto 4</h5>
         </div>
-      </div>    
 
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="mostrarDescricao(5)">
+        <div class="produto" onclick="abrirModal(5)">
           <img src="assets/img/produto5.jpg" class="img-fluid rounded" alt="Produto 5">
           <h5 class="mt-2">Produto 5</h5>
         </div>
-      </div>
-      
+
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="produto" onclick="mostrarDescricao(6)">
+        <div class="produto" onclick="abrirModal(6)">
           <img src="assets/img/produto6.jpg" class="img-fluid rounded" alt="Produto 6">
           <h5 class="mt-2">Produto 6</h5>
         </div>
-      </div>
-
-    <!-- Área de descrição -->
-    <div id="descricao-produto" class="mt-5 p-4 border rounded bg-light" style="display:none;">
-      <h3 id="titulo-produto"></h3>
-      <p id="texto-produto"></p>
-    </div>
-  </div>
-</section>
-
-<script>
-  // Textos de cada produto
-  const produtos = {
-    1: {
-      titulo: "Pen-Drive",
-      texto: "Transforme memórias em histórias inesquecíveis! O tempo passa, mas as lembranças que realmente importam podem ser eternizadas..."
-    },
-    2: {
-      titulo: "Álbum Fotográfico",
-      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
-    },
-    3: {
-      titulo: "Álbum de Figurinhas",
-      texto: "Decore sua casa com lembranças especiais transformadas em arte..."
-    },
-    4: {
-      titulo: "Quebra Cabeça",
-      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
-    },
-    5: {
-      titulo: "Porta Retrato",
-      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
-    },
-    6: {
-      titulo: "Monóculo",
-      texto: "Perfeito para eternizar momentos importantes em um material de alta qualidade..."
-    };
-
-  function mostrarDescricao(id) {
-    document.getElementById("descricao-produto").style.display = "block";
-    document.getElementById("titulo-produto").innerText = produtos[id].titulo;
-    document.getElementById("texto-produto").innerText = produtos[id].texto;
-  }
-</script>
-
+        
        </div><!-- End Pricing Item -->
 
         </div>
