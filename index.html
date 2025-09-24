@@ -398,11 +398,13 @@
   .produto.selecionado img {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    filter: none;
+    opacity: 1;
   }
 
   .produto.desfocado img {
-    filter: blur(2px) brightness(0.8);
-    opacity: 0.7;
+    filter: blur(3px) brightness(0.8);
+    opacity: 0.6;
   }
 </style>
 
@@ -446,11 +448,17 @@
     });
 
     // Destaca o selecionado
-    const selecionado = document.querySelector(`.produto:nth-child(${id})`);
+    const selecionado = document.querySelectorAll(".produto")[id - 1];
     selecionado.classList.add("selecionado");
     selecionado.classList.remove("desfocado");
   }
+
+  // 🔹 deixa todas nítidas ao carregar a página
+  window.onload = () => {
+    document.querySelectorAll(".produto").forEach(el => el.classList.remove("desfocado"));
+  };
 </script>
+    
        </div><!-- End Pricing Item -->
 
         </div>
