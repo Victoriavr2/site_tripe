@@ -989,6 +989,34 @@ section,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0;
   }
+  /* Ajustes específicos para a seção Sobre nós */
+
+/* 1. Fundo preto */
+.about {
+  background-color: #000;
+  padding: 60px 0; /* opcional, para respirar mais */
+}
+
+/* 2. Títulos e textos brancos */
+.about .content h2,
+.about .content p {
+  color: #fff;
+}
+
+/* 3. Remover borda/sombra da logo */
+.about img {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* 4. Jogar a logo mais para a direita */
+.about .col-lg-6:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 }
 
 /*--------------------------------------------------------------
