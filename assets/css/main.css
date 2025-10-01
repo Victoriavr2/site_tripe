@@ -1469,6 +1469,22 @@ section,
   .pricing .featured {
     transform: scale(1.15);
   }
+/* Ajusta tamanho dos quadrados dos produtos */
+.produto {
+  max-width: 160px;   /* largura máxima */
+  max-height: 160px;  /* altura máxima */
+  margin: 10px auto;  /* centraliza dentro da coluna */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.produto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* mantém proporção sem deformar */
+  border-radius: 8px;
+}
 }
 
 /*--------------------------------------------------------------
