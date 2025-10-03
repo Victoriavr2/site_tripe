@@ -989,6 +989,25 @@ section,
   .about .icon-boxes .col-md-6:nth-child(4) .icon-box {
     margin-top: 0;
   }
+/* Fundo preto específico da seção */
+.black-background {
+  background-color: #000; /* preto */
+  padding: 60px 0; /* garante respiro interno */
+}
+
+/* Texto branco para contraste */
+.black-background .content h2,
+.black-background .content h3,
+.black-background .content p {
+  color: #fff;
+}
+
+/* Ajuste do tamanho da logo */
+.logo-img {
+  max-width: 300px; /* ajuste aqui o tamanho desejado */
+  width: 100%;
+  height: auto;
+}
 }
 
 
