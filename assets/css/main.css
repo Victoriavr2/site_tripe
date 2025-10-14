@@ -1004,7 +1004,7 @@ section,
 
 /* Ajuste do tamanho da logo */
 .logo-img {
-  max-width: 300px; /* ajuste aqui o tamanho desejado */
+  max-width: 200px; /* ajuste aqui o tamanho desejado */
   width: 100%;
   height: auto;
 }
