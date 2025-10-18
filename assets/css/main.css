@@ -1491,7 +1491,7 @@ section,
 /* Ajusta tamanho dos quadrados dos produtos */
 .produto {
   max-width: 180px;   /* largura máxima */
-  max-height: 160px;  /* altura máxima */
+  max-height: 180px;  /* altura máxima */
   margin: 10px auto;  /* centraliza dentro da coluna */
   display: flex;
   align-items: center;
