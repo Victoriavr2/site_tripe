@@ -485,8 +485,8 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 10px;
-  margin-right: 3px;
+  max-height: 40px;
+  margin-right: 6px;
 }
 
 .footer .footer-about .logo span {
@@ -1004,9 +1004,8 @@ section,
 
 /* Ajuste do tamanho da logo */
 .logo-img {
-  width: 10px;
-  height: 10px;
-  object-fit: cover; /* corta sem distorcer */
+  width: 50px;
+  height: auto;
 }
 }
 
