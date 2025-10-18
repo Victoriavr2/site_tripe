@@ -1492,7 +1492,7 @@ section,
 .produto {
   max-width: 200px;   /* largura máxima */
   max-height: 2000px;  /* altura máxima */
-  margin: 10px auto;  /* centraliza dentro da coluna */
+  margin: 20px auto;  /* centraliza dentro da coluna */
   display: flex;
   align-items: center;
   justify-content: center;
