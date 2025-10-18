@@ -1004,8 +1004,8 @@ section,
 
 /* Ajuste do tamanho da logo */
 .logo-img {
-  width: 50px;
-  height: auto;
+  width: 150px !important;
+  height: auto !important;
 }
 }
 
