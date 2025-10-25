@@ -1513,11 +1513,6 @@ section,
   font-size: 34px;
 }
 
-.faq .info h3 span {
-  display: block;
-  font-weight: normal;
-}
-
 .faq .content p {
   font-size: 15px;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
