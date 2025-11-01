@@ -2395,7 +2395,7 @@ section,
   padding-bottom: 30px;
 }
 
-.blog-details-page {
+.blog-details .page {
   background-image: url("assets/img/blog/ondas blog.png");
   background-repeat: no-repeat;
   background-position: left top, right bottom;
